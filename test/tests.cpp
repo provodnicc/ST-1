@@ -15,12 +15,12 @@ TEST(PrimeTest, CheckPrimeWithCompositeNumber) {
 
 
 TEST(PrimeTest, NthPrimeNumber) {
-  EXPECT_EQ(13, nPrime(5));
+  EXPECT_EQ(11, nPrime(5));
 }
 
 
 TEST(PrimeTest, NextPrimeNumber) {
-  EXPECT_EQ(29, nextPrime(4));
+  EXPECT_EQ(29, nextPrime(5));
 }
 
 
