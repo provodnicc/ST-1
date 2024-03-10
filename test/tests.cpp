@@ -20,7 +20,7 @@ TEST(PrimeTest, NthPrimeNumber) {
 
 
 TEST(PrimeTest, NextPrimeNumber) {
-  EXPECT_EQ(29, nextPrime(7));
+  EXPECT_EQ(11, nextPrime(7));
 }
 
 
