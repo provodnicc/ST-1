@@ -31,7 +31,7 @@ TEST(PrimeTest, NextPrimeNumber) {
 
 
 TEST(PrimeTest, SumOfPrimeNumbers) {
-  uint64_t maxBound = 20;
+  uint64_t maxBound = 21;
   uint64_t expectedSum = 2 + 3 + 5 + 7 + 11 + 13 + 17 + 19;
   EXPECT_EQ(expectedSum, sumPrime(maxBound));
 }
