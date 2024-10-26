@@ -3,11 +3,19 @@
 #include "alg.h"
 
 bool checkPrime(uint64_t value) {
-  if (value <= 1)
+   if (value <= 1) {
     return false;
-  for (uint64_t i = 2; i * i <= value; i++) {
-    if (value % i == 0)
+  }
+  if (value <= 3) {
+    return true;
+  }
+  if (value % 2 == 0 || value % 3 == 0) {
+    return false;
+  }
+  for (int i = 5; i * i <= value; i += 6) {
+    if (value % i == 0 || value % (i + 2) == 0) {
       return false;
+    }
   }
   return true;
 }
@@ -26,12 +34,9 @@ uint64_t nPrime(uint64_t n) {
 }
 
 uint64_t nextPrime(uint64_t value) {
-  while (true) {
-    ++value;
-    if (checkPrime(value)) {
-      return value;
-    }
+  while (!checkPrime(++value)) {
   }
+  return value;
 }
 
 uint64_t sumPrime(uint64_t hbound) {

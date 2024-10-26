@@ -5,12 +5,12 @@
 
 
 TEST(PrimeTest, CheckPrimeWithPrimeNumber) {
-  EXPECT_TRUE(checkPrime(11));
+  EXPECT_TRUE(checkPrime(3));
 }
 
 
 TEST(PrimeTest, CheckPrimeWithCompositeNumber) {
-  EXPECT_FALSE(checkPrime(20));
+  EXPECT_FALSE(checkPrime(4));
 }
 
 
@@ -20,12 +20,12 @@ TEST(PrimeTest, NthPrimeNumber) {
 
 
 TEST(PrimeTest, NextPrimeNumber) {
-  EXPECT_EQ(11, nextPrime(7));
+  EXPECT_EQ(5, nextPrime(3));
 }
 
 
 TEST(PrimeTest, SumOfPrimeNumbers) {
-  uint64_t maxBound = 21;
-  uint64_t expectedSum = 2 + 3 + 5 + 7 + 11 + 13 + 17 + 19;
+  uint64_t maxBound = 18;
+  uint64_t expectedSum = 2 + 3 + 5 + 7 + 11 + 13 + 17;
   EXPECT_EQ(expectedSum, sumPrime(maxBound));
 }
